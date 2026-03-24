@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ブログ | 〇〇 企業</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .blog-list {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 24px;
+        }
+
+        .blog-card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .blog-card h3 {
+            color: #2c3e50;
+            font-size: 1.2rem;
+        }
+
+        .blog-date {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .blog-card a {
+            align-self: flex-start;
+            color: #3498db;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .blog-card a:hover {
+            color: #2980b9;
+            text-decoration: underline;
+        }
+
+        @media (max-width: 900px) {
+            .blog-list {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 600px) {
+            .blog-list {
+                grid-template-columns: 1fr;
+            }
+
+            header nav a {
+                display: inline-block;
+                margin: 6px 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>〇〇 企業</h1>
+        <nav>
+            <a href="index.html#home">ホーム</a>
+            <a href="index.html#about">概要</a>
+            <a href="index.html#services">サービス</a>
+            <a href="index.html#contact">問い合わせ</a>
+        </nav>
+    </header>
+
+    <main>
+        <section aria-labelledby="blog-heading">
+            <h2 id="blog-heading">ブログ</h2>
+            <div class="blog-list">
+                <article class="blog-card">
+                    <h3>新サービス公開のお知らせ</h3>
+                    <p class="blog-date"><time datetime="2026-03-18">2026年3月18日</time></p>
+                    <p>お客様の業務効率化を支援する新サービスを公開しました。導入メリットや活用シーンをご紹介します。</p>
+                    <a href="#">続きを読む</a>
+                </article>
+
+                <article class="blog-card">
+                    <h3>導入事例：株式会社サンプル様</h3>
+                    <p class="blog-date"><time datetime="2026-02-26">2026年2月26日</time></p>
+                    <p>導入後3か月で作業時間を30%削減した事例を掲載。現場での具体的な運用ポイントをまとめました。</p>
+                    <a href="#">続きを読む</a>
+                </article>
+
+                <article class="blog-card">
+                    <h3>イベント登壇レポート</h3>
+                    <p class="blog-date"><time datetime="2026-01-30">2026年1月30日</time></p>
+                    <p>先日開催された業界イベントにて、当社の取り組みや今後の展望についてお話しした内容をお届けします。</p>
+                    <a href="#">続きを読む</a>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 〇〇 企業. All rights reserved.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
